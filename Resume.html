@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sasidhar Gadepalli - Data Engineer Portfolio</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            color: #333;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        header {
+            background: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav {
+            background: #444;
+            padding: 10px 0;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .hero {
+            padding: 50px 0;
+            background: url('header-background.jpg') no-repeat center center/cover;
+            text-align: center;
+            color: #fff;
+        }
+
+        .hero h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+        }
+
+        .projects, .resume, .contact {
+            padding: 5px 0;
+        }
+
+        .projects h2, .resume h2, .contact h2 {
+            margin-bottom: 3px;
+        }
+
+        .projects h3, .resume h3, .contact h3 {
+            text-align: center;
+        }
+
+        .footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+        a:link {
+  color: green;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color: pink;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: red;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+a:active {
+  color: yellow;
+  background-color: transparent;
+  text-decoration: underline;
+}
+    </style>
+
+<script>
+// Define the function to make the API call
+function fetchAndUpdateCounter() {
+  var apiGatewayUrl = 'https://xcnqel1e58.execute-api.us-east-1.amazonaws.com/Dev/MyResume';
+
+  fetch(apiGatewayUrl)
+    .then(function(response) {
+      if (response.ok) {
+        return response.json(); // Parse the JSON response body
+      }
+      throw new Error('Request failed: ' + response.status);
+    })
+    .then(function(data) {
+      // Parse the stringified JSON 'body' to get the actual JSON object
+      var counterData = JSON.parse(data.body);
+      var counterValue = counterData.count;
+      document.getElementById('counter').textContent = 'Number of visitors so far: ' + counterValue;
+    })
+    .catch(function(error) {
+      // Handle any errors
+      document.getElementById('counter').textContent = 'Error: ' + error.message;
+    });
+}
+
+// Call the function when the window loads
+window.onload = fetchAndUpdateCounter;
+</script>
+
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Sasidhar Gadepalli</h1>
+            <p>Data Engineer and AWS Professional</p>
+            <a href="https://www.linkedin.com/in/sasidhar-gadepalli-7040682b/">LinkedIn Profile</a>
+            <ul>gsasidhar427@gmail.com - 747-217-8172</ul>
+            <a href="#serverless-info" id="counter" title="Implemented this feature using API Gateway, Lambda, DynamoDB in serverless architecture"> Loading visitor count...</a>
+            </div>
+    </header>
+    
+    <section id="resume" class="resume">
+        <div class="container">
+            <h2>Professional Experience</h2>
+            <ul><li>Overall, 12 years of IT experience as a software developer in various roles </li>
+<li>Designed and implemented scalable PySpark ETL frameworks that streamlined data ingestion, transformation, and loading processes, enhancing data pipeline reliability and efficiency</li>
+<li>Developed and maintained a robust data lake using PySpark on top of AWS S3</li>
+<li>Expertly managed large datasets with AWS S3, implementing best practices in data storage, security, and accessibility</li>
+<li>Developed and maintained scalable data processing workflows with Airflow, enhancing automation and monitoring</li>
+<li>Leveraged AWS S3 for secure and durable object storage, implementing lifecycle policies and versioning that enhanced data governance</li>
+<li>Designed and implemented serverless data processing workflows using AWS Lambda</li>
+<li>Designed a fault-tolerant and resilient multi-tier AWS infrastructure, employing services like EC2, RDS, and S3</li>
+<li>Developed a comprehensive disaster recovery strategy on AWS, using cross-region S3 replication and RDS snapshots to achieve a Recovery Point Objective (RPO) of less than 5 minutes and Recovery Time Objective (RTO) of less than 15 minutes.</li>
+<li>Crafted an AWS security framework that integrated IAM policies, Security Groups, and VPC configurations</li>
+<li>Utilized Python to automate data cleaning and preprocessing tasks, improving data quality</li>
+<li>Developed Python scripts for complex data analysis, uncovering hidden patterns</li>
+<li>Used different AWS services such as EC2, Elastic beanstalk, S3 and Simple Queue Service</li>
+<li>Extensive experience in handling all these services </li>
+<li>Very quick in analyzing the problem and coming up with fix </li>
+<li>PL/SQL Developer in Analysis, Design and Implementation of Business Applications using the Oracle Relational Database Management System (RDBMS).</li>
+<li>Effectively made use of Table Functions, Indexes, Table Partitioning, Collections, Analytical functions, Materialized Views, Query Re-Write and Transportable table spaces.</li>
+<li>Strong experience in Data warehouse concepts, ETL.</li>
+<li>Good knowledge on logical and physical Data Modeling using normalizing Techniques.</li>
+<li>Created Tables, Views, Constraints, Index (B Tree, Bitmap and Function Based).</li>
+<li>Developed Complex database objects like Stored Procedures, Functions, Packages and Triggers using SQL and PL/SQL</li></div>
+    </section>
+
+    <section id="Certifications" class="projects">
+        <div class="container">
+            <h2>Professional Certifications</h2>
+            <ul>
+                <li><a href="https://www.credly.com/badges/9dfb9dae-fb73-48ad-b4c6-ac48f576dd10/public_url">AWS Solutions Architect Associate Certified</a></li>
+                <li><a href="https://www.credly.com/badges/1185828a-c3ff-4a76-9387-f530f18680f8/public_url">AWS Developer Associate Certified</a></li>
+                <li><a href="https://www.credly.com/badges/01fa62a7-5dd9-476a-b726-ce21aba6894d/public_url">AWS Database Speciality Certified</a></li>
+                <li><a href="https://la.utexas.edu/texasexeced/digitalVerification.html?key=WrjLk">Post Graduate Program in Artificial Intelligence and Machine Learning</a></li>
+                <li><a href="https://www.credly.com/badges/a76ee3e9-8ff4-4c76-9700-7f232e0b5409/public_url">AWS Certified Cloud Practitioner</a></li>
+            </ul>
+        </div>
+    </section>
+
+   <section id="Skills" class="projects">
+        <div class="container">
+            <h2>Technical Skills</h2>
+            <ul>
+             <li><b>Programming and Scripting:</b> Python, Apache PySpark, Java, MySQL, Shell Scripting, Oracle PLSQL </li>
+             <li><b>AWS:</b> EC2, S3, Glacier, Redshift, RDS, EMR, Lambda, Glue, CloudWatch, Kinesis, CloudFront, Route53, DynamoDB, Code Pipeline, EKS, Athena, Quick Sight. </li>
+             <li><b>SQL Databases:</b> Oracle DB, Microsoft SQL Server, Azure SQL Database, Amazon RDS </li>
+<li><b>Web Development:</b> HTML, XML, JSON, CSS, JavaScript.</li>
+<li><b>Source Code Management:</b> GitHub, Code Commit.</li>
+<li><b>Containerization:</b> Docker & Docker Hub</li>
+<li><b>Build & Development Tools:</b> Jenkins, Maven, Gradle, Bamboo. </li>
+<li><b>Methodologies:</b> Agile/Scrum, Waterfall. </li></ul> </div>
+    </section>
+
+
+    <section id="Education" class="projects">
+        <div class="container">
+            <h2>Education</h2>
+            <ul>
+             <li>Bachelor of Technology from Jawaharlal Nehru Technological University - 2011 </li>
+             <li>Post Graduate Program in Artificial Intelligence and Machine Learning: Business Applications from Texas McCombs, the University of Texas, Austin - 2022</li>
+         </ul> </div>
+    </section>
+
+
+<section id="projects" class="projects">
+        <div class="container">
+            <h2>Professional Projects</h2>
+            <br><b>Client: Capital Group Companies, Irvine, CA </b> </br>                   
+<br><b>Duration: 2019 September - Current</b></br>
+<br><b>Role: Data Engineer</b></br>
+<br><b>Roles and Responsibilities:</b></br>
+<ul>
+<li>Built various data pipelines from S3</li>
+<li>Engineered high-performance data processing jobs using PySpark</li>
+<li>Designed and implemented scalable PySpark ETL frameworks that streamlined data ingestion, transformation, and loading processes, enhancing data pipeline reliability and efficiency</li>
+<li>Developed and maintained a robust data lake using PySpark on top of AWS S3</li>
+<li>Expertly managed large datasets with AWS S3, implementing best practices in data storage, security, and accessibility</li>
+<li>Developed and maintained scalable data processing workflows with Airflow, enhancing automation and monitoring</li>
+<li>Leveraged AWS S3 for secure and durable object storage, implementing lifecycle policies and versioning that enhanced data governance</li>
+<li>Designed and implemented serverless data processing workflows using AWS Lambda</li>
+<li>Designed a fault-tolerant and resilient multi-tier AWS infrastructure, employing services like EC2, RDS, and S3</li>
+<li>Developed a comprehensive disaster recovery strategy on AWS, using cross-region S3 replication and RDS snapshots to achieve a Recovery Point Objective (RPO) of less than 5 minutes and Recovery Time Objective (RTO) of less than 15 minutes.</li>
+<li>Crafted an AWS security framework that integrated IAM policies, Security Groups, and VPC configurations</li>
+            </ul>
+
+
+            <br><b>Client: Warner Music Group, Burbank, CA </b> </br>                   
+<br><b>Duration: 2017 August - 2019 September</b></br>
+<br><b>Role: Python AWS developer and Data Engineer</b></br>
+<br><b>Roles and Responsibilities:</b></br>
+<ul>
+<li>Engineered and optimized ETL pipelines using Python</li>
+<li>Utilized Python to automate data cleaning and preprocessing tasks, improving data quality</li>
+<li>Used different AWS services such as EC2, Elastic beanstalk, S3 and Simple Queue Service with extensive hands-on</li>
+<li>Successfully deployed and managed multiple web applications using AWS Elastic Beanstalk, automating scaling and load balancing</li>
+<li>Designed a highly available and secure storage solution utilizing AWS S3, implementing best practices for data lifecycle management and cross-region replication</li>
+<li>Integrated AWS Simple Queue Service (SQS) to decouple microservices, leading to a more resilient application architecture</li>
+<li>Developed a CI/CD pipeline that utilized AWS Elastic Beanstalk for seamless application updates</li>
+<li>Leveraged AWS S3 for cost-effective archival of terabytes of legacy data, applying intelligent tiering to reduce storage costs</li>
+            </ul>
+
+
+<br><b>Client: Warner Music Group, Burbank, CA </b> </br>                   
+<br><b>Duration: Aug 2012 - 2017 Aug</b></br>
+<br><b>Role: Java Developer</b></br>
+<br><b>Roles and Responsibilities:</b></br>
+<ul>
+<li>Developed a suite of scalable, secure Java-backed RESTful APIs, serving as the backbone for a high-traffic web application</li>
+<li>Spearheaded a cross-functional team in the end-to-end development of a feature-rich web application, leveraging Java for server-side logic and JavaScript for a responsive, intuitive user interface</li>
+<li>Architected a Java-based microservices framework that increased application modularity</li>
+<li>Refactored legacy codebase to modern Java standards</li>
+<li>Designed and implemented a comprehensive data auditing solution using Oracle PL/SQL triggers</li>
+<li>Developed a suite of PL/SQL functions and procedures for a financial reporting system, facilitating the generation of real-time fiscal reports that provided key insights into organizational financial health</li>
+            </ul>
+</div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2023 Sasidhar Gadepalli. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
