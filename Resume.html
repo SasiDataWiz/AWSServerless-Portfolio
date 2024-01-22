@@ -5,110 +5,180 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sasidhar Gadepalli - Data Engineer Portfolio</title>
     <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            font-family: 'Arial', sans-serif;
-            color: #333;
-        }
+/* General Styles */
+body {
+  background: #f0f0f0;
+  font-family: 'Roboto', sans-serif; /* Updated font-family */
+  line-height: 1.6;
+  margin: 0;
+  color: #333;
+}
 
-        .container {
-            width: 80%;
-            margin: auto;
-            overflow: hidden;
-        }
+.container {
+  max-width: 960px;
+  margin: 30px auto;
+  padding: 20px;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
 
-        header {
-            background: #333;
-            color: #fff;
-            padding: 20px 0;
-            text-align: center;
-        }
+/* Header Styles */
+header {
+  background: linear-gradient(135deg, #6dd5ed, #2193b0);
+  text-align: center;
+  padding: 20px 0;
+  color: #fff;
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+}
 
-        header h1 {
-            margin: 0;
-        }
+header h1 {
+  margin: 0;
+  font-size: 2.5em;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #2193b0;
+}
 
-        nav {
-            background: #444;
-            padding: 10px 0;
-        }
+/* Typewriter animation */
+header p {
+  display: inline-block;
+  overflow: hidden;
+  border-right: .15em solid orange;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: .15em;
+  animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+  color: #2193b0;
+}
 
-        nav ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
 
-        nav ul li {
-            display: inline;
-            margin-right: 10px;
-        }
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange }
+}
 
-        nav ul li a {
-            color: #fff;
-            text-decoration: none;
-            font-weight: bold;
-        }
+/* Experience Section */
+section.experience {
+  padding: 30px 0;
+  border-top: 1px solid #eaeaea;
+  border-bottom: 1px solid #eaeaea;
+}
 
-        .hero {
-            padding: 50px 0;
-            background: url('header-background.jpg') no-repeat center center/cover;
-            text-align: center;
-            color: #fff;
-        }
+.experience h2, .experience h3 {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
 
-        .hero h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
-        }
+.experience h1 {
+  margin-bottom: 15px;
+}
 
-        .hero p {
-            font-size: 1.2em;
-        }
+.experience h2 {
+  margin-bottom: 15px;
+}
 
-        .projects, .resume, .contact {
-            padding: 5px 0;
-        }
+.experience h3 {
+  margin-top: 0;
+}
 
-        .projects h2, .resume h2, .contact h2 {
-            margin-bottom: 3px;
-        }
+.experience p {
+  font-size: 14px;
+}
 
-        .projects h3, .resume h3, .contact h3 {
-            text-align: center;
-        }
+/* Skills Section */
+.skills {
+  background: #2193b0;
+  color: #fff;
+  padding: 30px;
+  text-align: center;
+}
 
-        .footer {
-            background: #333;
-            color: #fff;
-            text-align: center;
-            padding: 10px 0;
-        }
-        a:link {
-  color: green;
-  background-color: transparent;
+.skills ul {
+  list-style: none;
+  padding: 0;
+}
+
+.skills ul li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.skills li:before {
+  content: '🚀';
+  margin-right: 5px;
+}
+
+/* Footer Styles */
+footer {
+  text-align: center;
+  padding: 20px 0;
+  background: #333;
+  color: #2193b0;
+}
+
+footer p {
+  margin: 0;
+}
+
+footer a {
+  color: #ff9800;
   text-decoration: none;
 }
 
-a:visited {
-  color: pink;
-  background-color: transparent;
-  text-decoration: none;
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2em;
+  }
+
+  .skills ul li {
+    display: block;
+    margin: 10px 0;
+  }
 }
 
-a:hover {
-  color: red;
-  background-color: transparent;
-  text-decoration: underline;
+@media only screen and (max-width: 768px) {
+  /* Responsive Container */
+  .container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  /* Responsive Typography */
+  h1, h2, h3, h4, h5, h6, p {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
 }
 
-a:active {
-  color: yellow;
-  background-color: transparent;
-  text-decoration: underline;
+@media only screen and (max-width: 480px) {
+  h1 {
+    font-size: 20px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  /* Stack columns vertically on small screens */
+  .column {
+    width: 100%;
+    display: block;
+  }
 }
-    </style>
+</style>
 
 <script>
 // Define the function to make the API call
@@ -126,7 +196,7 @@ function fetchAndUpdateCounter() {
       // Parse the stringified JSON 'body' to get the actual JSON object
       var counterData = JSON.parse(data.body);
       var counterValue = counterData.count;
-      document.getElementById('counter').textContent = 'Number of visitors so far: ' + counterValue;
+      document.getElementById('counter').textContent = 'This is the dynamic page visitor counter, you are visitor number: ' + counterValue;
     })
     .catch(function(error) {
       // Handle any errors
@@ -137,7 +207,7 @@ function fetchAndUpdateCounter() {
 // Call the function when the window loads
 window.onload = fetchAndUpdateCounter;
 </script>
-
+<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -145,8 +215,7 @@ window.onload = fetchAndUpdateCounter;
         <div class="container">
             <h1>Sasidhar Gadepalli</h1>
             <p>Data Engineer and AWS Professional</p>
-            <a href="https://www.linkedin.com/in/sasidhar-gadepalli-7040682b/">LinkedIn Profile</a>
-            <ul>gsasidhar427@gmail.com - 747-217-8172</ul>
+           <p><a href="https://www.linkedin.com/in/sasidhar-gadepalli-7040682b/">LinkedIn Profile</a> - gsasidhar427@gmail.com - 747-217-8172<br><br>
             <a href="#serverless-info" id="counter" title="Implemented this feature using API Gateway, Lambda, DynamoDB in serverless architecture"> Loading visitor count...</a>
             </div>
     </header>
@@ -180,13 +249,12 @@ window.onload = fetchAndUpdateCounter;
     <section id="Certifications" class="projects">
         <div class="container">
             <h2>Professional Certifications</h2>
-            <ul>
-                <li><a href="https://www.credly.com/badges/9dfb9dae-fb73-48ad-b4c6-ac48f576dd10/public_url">AWS Solutions Architect Associate Certified</a></li>
-                <li><a href="https://www.credly.com/badges/1185828a-c3ff-4a76-9387-f530f18680f8/public_url">AWS Developer Associate Certified</a></li>
-                <li><a href="https://www.credly.com/badges/01fa62a7-5dd9-476a-b726-ce21aba6894d/public_url">AWS Database Speciality Certified</a></li>
-                <li><a href="https://la.utexas.edu/texasexeced/digitalVerification.html?key=WrjLk">Post Graduate Program in Artificial Intelligence and Machine Learning</a></li>
-                <li><a href="https://www.credly.com/badges/a76ee3e9-8ff4-4c76-9700-7f232e0b5409/public_url">AWS Certified Cloud Practitioner</a></li>
-            </ul>
+            <a href="https://la.utexas.edu/texasexeced/digitalVerification.html?key=WrjLk">Post Graduate Program in Artificial Intelligence and Machine Learning  @The University of Texas at Austin</a><br><br><br>
+            <b>4x aws certified</b><br>
+            <a href="https://www.credly.com/badges/9dfb9dae-fb73-48ad-b4c6-ac48f576dd10/public_url" title="AWS Certified Solutions Architect Associate"><img src="https://s3.amazonaws.com/sasidhar-resume.net/Architect.png" alt="Certification Badge" style="width:100px; height:auto;"></a>
+                <a href="https://www.credly.com/badges/1185828a-c3ff-4a76-9387-f530f18680f8/public_url" title="AWS Certified Developer Associate"><img src="https://s3.amazonaws.com/sasidhar-resume.net/Developer.png" alt="Certification Badge" style="width:100px; height:auto;"></a>
+                <a href="https://www.credly.com/badges/01fa62a7-5dd9-476a-b726-ce21aba6894d/public_url" title="AWS Certified Database Specialty Certified"><img src="https://s3.amazonaws.com/sasidhar-resume.net/Database.png" alt="Certification Badge" style="width:100px; height:auto;"></a>
+                <a href="https://www.credly.com/badges/a76ee3e9-8ff4-4c76-9700-7f232e0b5409/public_url" title="AWS Cloud Practitioner Certified"><img src="https://s3.amazonaws.com/sasidhar-resume.net/Practitioner.png" alt="Certification Badge" style="width:100px; height:auto;"></a>
         </div>
     </section>
 
