@@ -17,6 +17,14 @@ Welcome to the GitHub repository for my professional portfolio website. This sit
 
   <img width="625" alt="Screenshot 2024-01-20 at 2 50 58 PM" src="https://github.com/SasiDataWiz/AWSServerless-Portfolio/assets/128953667/7552118f-4bea-411f-8451-e11338d2d0c7">
 
+## Tech Stack
+
+- S3
+- CloudFront
+- Route 53
+- Lambda
+- API Gateway
+- DynamoDB
 
 ## Local Development
 
